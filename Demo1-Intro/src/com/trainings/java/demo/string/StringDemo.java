@@ -1,4 +1,4 @@
-package com.trainings.java.demo.conditional;
+package com.trainings.java.demo.string;
 
 public class StringDemo {
 
