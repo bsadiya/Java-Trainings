@@ -12,18 +12,17 @@ public class MinMaxElementInArrayDemo {
 		int min=a[0];
 		for (int i=1;i<a.length;i++)
 		{
-			if (min > a[i]) {
-				min = a[i];
-			}
+			if (min > a[i]) min = a[i];
 		}
 		System.out.println("minimum value is ="+min);
 		
 		//maximum element of the Array
 		int max=a[0];
 		for (int i=1;i<a.length;i++)
-		{ if (max<a[i])
-		{ max=a[i];
-		}
+		{
+			if (max < a[i]) {
+				max = a[i];
+			}
 		}
 		
 		System.out.println("maximum value is ="+max);
