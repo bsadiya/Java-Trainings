@@ -22,6 +22,7 @@ public class Employee {
 	}
 	
 	Employee(){
+		super();
 		System.out.println("Constructor Block!!!");
 		numberOfEmployees++;
 		System.out.println("numberOfEmployees: "+numberOfEmployees);
