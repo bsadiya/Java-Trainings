@@ -15,6 +15,7 @@ class Org{
 	final Dept dept = new Dept();
 	
 	void createDept() {
+//		dept = new Dept(); // The final field Org.dept cannot be assigned
 		dept.deptId =123;
 		System.out.println("Department created with id : "+dept.deptId);
 	}
@@ -34,4 +35,14 @@ class Dept{
 
 class Professor{
 	
+}
+
+
+class Engine{
+	
+}
+
+
+class car {
+	Engine engine = new Engine();
 }
