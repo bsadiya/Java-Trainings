@@ -33,11 +33,13 @@ class Test2 {
 
 	public static void divideZero() {
 
+		int []a = new int[2]; // 0 1 2 3
 		System.out.println("Dividing with Zero Satrt!!!!");
 
 		System.out.println("Stmt3");
-		System.out.println("UnChecked Exception!!!");
+		System.out.println("UnChecked Exception!!!"+ a[0]);
 		System.out.println(10 / 0);
+		
 		System.out.println("Stmt4");
 
 		System.out.println("Divided by Zero Succesfully.....");

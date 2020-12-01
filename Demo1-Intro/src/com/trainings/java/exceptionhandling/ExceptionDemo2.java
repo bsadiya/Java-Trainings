@@ -2,9 +2,12 @@ package com.trainings.java.exceptionhandling;
 
 public class ExceptionDemo2 {
 
+	public final int finalVariable=100;
 	public static void main(String[] args) {
 		System.out.println("Arthmt operation Start!!!!!");
 		Test1.arithMeticOperation();
+		
+		Test1 t = new Test1();
 		System.out.println("Arthmt operation performed!!!!!");
 
 	}
@@ -13,10 +16,15 @@ public class ExceptionDemo2 {
 
 class Test1 {
 	public static void arithMeticOperation() {
-		divide();
+		try {
+			divide();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	public static void divide() {
+	public static void divide() throws Exception {
 		divideZero();
 	}
 
@@ -30,11 +38,14 @@ class Test1 {
 		}
 		catch(Exception e){
 			System.out.println("Exception Block!!");
+				throw new ArithmeticException("ExceptionOccured!!"); // un-checked
+//				throw new ExceptionDemo2(); // an exception type must be a subclass of Throwable
 		}
 		finally {
 			// close open  streams --- file closure or DB connection closure
 			System.out.println("Finallly Block!!");
 		}
+	
 		
 		try {
 		System.out.println("Stmt3");
