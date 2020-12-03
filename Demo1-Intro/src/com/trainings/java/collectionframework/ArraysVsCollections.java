@@ -52,6 +52,7 @@ public class ArraysVsCollections {
 		arrayList.add(1.0);
 		arrayList.add('c');
 		
+		
 		System.out.println("Array size: "+arrayList.size() );
 		System.out.println("Array Capacity: "+ getCapacity(arrayList));
 		
@@ -84,7 +85,7 @@ public class ArraysVsCollections {
 
 System.out.println("---------------");
 		
-		ArrayList<String> genericArrayList = new ArrayList<String>();
+		ArrayList<String> genericArrayList = new ArrayList<String>(); //  String[] strarray = new String[2];--> Array/List
 		genericArrayList.add("Sadiya");
 		genericArrayList.add("Raju");
 		genericArrayList.add("Shyam");
