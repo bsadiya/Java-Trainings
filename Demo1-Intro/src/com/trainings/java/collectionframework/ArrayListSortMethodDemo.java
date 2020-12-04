@@ -21,8 +21,7 @@ public class ArrayListSortMethodDemo {
 		System.out.println("Sorted ArrayList: "+intArray);
 		Collections.sort(intArray, Collections.reverseOrder());
 		System.out.println("descending order Integer ArrayList: "+ intArray);
-		
-		
+				
 		System.out.println("UnSorted Array: "+ Arrays.toString(arr));
 		Arrays.sort(arr);
 		System.out.println("Sorted Array: "+ Arrays.toString(arr));
