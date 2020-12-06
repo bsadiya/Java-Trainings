@@ -76,6 +76,7 @@ public class CompareToDemo {
 		Comparator<Movie> mc= new MovieNameComparator();
 		Collections.sort(movies, mc);
 		
+//		Enumeration e = movies.elements(); 
 		Enumeration<Movie> e = Collections.enumeration(movies);
 		while (e.hasMoreElements()) {
 			Movie m = e.nextElement();
