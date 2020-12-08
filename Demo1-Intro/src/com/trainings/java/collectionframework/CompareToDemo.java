@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Enumeration;
 import java.util.Iterator;
+import java.util.ListIterator;
+import java.util.Vector;
 
 public class CompareToDemo {
 
@@ -76,7 +78,36 @@ public class CompareToDemo {
 		Comparator<Movie> mc= new MovieNameComparator();
 		Collections.sort(movies, mc);
 		
-//		Enumeration e = movies.elements(); 
+		
+		Vector<String> v = new Vector<>();
+		
+		Iterator itr1 = v.iterator(); // Iterator itr = <collection -list/set/map>.iterator();
+		while (itr.hasNext())
+		{
+			Movie m = (Movie) itr.next();
+			System.out.println(m.rating + "---" + m.name);
+		}
+		
+		
+		System.out.println("*********ListIterator ***********");
+		ListIterator<Movie> listIterator = movies.listIterator();
+		while (listIterator.hasNext())
+		{
+			Movie m = (Movie) listIterator.next();
+			System.out.println(m.rating + "---" + m.name);
+			System.out.println("inside ListItr...");
+			
+			if(listIterator.hasPrevious()) {
+				System.out.println("Has Prev element: "+ listIterator.previousIndex());
+			}
+		}
+		
+		System.out.println("*********ListIterator ***********");
+		
+		
+		
+		Enumeration ev = v.elements();
+		
 		Enumeration<Movie> e = Collections.enumeration(movies);
 		while (e.hasMoreElements()) {
 			Movie m = e.nextElement();

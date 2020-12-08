@@ -57,12 +57,11 @@ public class RSEmployee implements Comparable<RSEmployee>{
 
 	@Override
 	public int compareTo(RSEmployee o) {
-		
 		if(this.empName.compareTo(o.getEmpName()) == 0) {
-			if(this.experience < o.getExperience()) {
+			if(this.experience > o.getExperience()) {
 				return -1;
 			}
-			if(this.experience > o.getExperience()) {
+			if(this.experience < o.getExperience()) {
 				return 1;
 			}
 			return 0;
