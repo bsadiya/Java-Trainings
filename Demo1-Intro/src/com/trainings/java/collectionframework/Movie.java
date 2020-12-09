@@ -29,7 +29,7 @@ public class Movie implements Comparable<Movie>{ // Comparable and comparator  -
 
 	@Override
 	public String toString() {
-		return "Movie [rating=" + rating + ", name=" + name + "]";
+		return "Movie [ name=" + name + "]";
 	}
 
 	
