@@ -14,6 +14,22 @@ public class CompareToDemo {
 		
 		 //Integer, Boolean, Double, ....String --->Implements Comparable interface...so sorting will be applied....
 		
+		int a[] = new int[5]; //
+		Object objArray[] = new Object[5];
+		objArray[0] = "StringObj";
+		objArray[1] = 'S';// Character -char
+		objArray[2] = new Movie(1,"V");
+		
+		//Objects and Premitives--int char,double
+		ArrayList hetroElements = new ArrayList(); // 10 ...n/2
+		hetroElements.add(10);
+		hetroElements.add(new Integer(1));
+		hetroElements.add("Sadiya");
+		hetroElements.add(new Movie(1,"V"));
+		
+		int i = (int) hetroElements.get(0); //RE- java.lang.ClassCastException
+		System.out.println("*******"+i);
+		
 		ArrayList<String> names = new ArrayList<>();
 		names.add("Raju");
 		names.add("Sadiya");
@@ -24,9 +40,42 @@ public class CompareToDemo {
 		
 		System.out.println("Raju".toLowerCase());
 		
-		Collections.sort(names);
+		System.out.println("________________________________________"); // another class which having sorting logic
+		//[Raju, Sadiya, Sai, Shyam] -- Default sorting
+		
+		Collections.sort(names, new Comparator<String>() {
+			@Override
+			public int compare(String s1, String s2) {
+//				return 0; // insertion order preserves
+//				return 1; // same as insertion order
+//				return -1; // reverse insertion order
+//				return s1.compareTo(s2);
+//				return s2.compareTo(s1);
+//				return - s2.compareTo(s1);
+				return -s1.compareTo(s2);
+			}
+		} ); // Alphabetical order
+		
 		System.out.println(names);
 		
+		
+		
+		ArrayList<Integer> ranks = new ArrayList<>();
+		ranks.add(5);
+		ranks.add(7);
+		ranks.add(3);
+		ranks.add(1);
+		ranks.add(2);
+		ranks.add(7);
+		ranks.add(5);
+		System.out.println(ranks);
+		Collections.sort(ranks);// [5, 7, 3, 1, 2, 7, 5]
+		System.out.println(ranks); //[1, 2, 3, 5, 5, 7, 7]  -- ASC , DSC --> 
+		
+		Collections.sort(ranks, new DescRank());
+		System.out.println(ranks);
+		
+		System.out.println("________________________________________");
 		
 //		---------------------- Comparable/Comparator -->Interfaces
 		

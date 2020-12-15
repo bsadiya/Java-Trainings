@@ -57,6 +57,7 @@ public class MapDemo {
 		 System.out.println("********");
 		 Map.Entry mapentry = (Map.Entry)itr.next();		 
 		 System.out.println(mapentry.getKey());
+		 System.out.println(mapentry.getValue());
 //		 
 //		 Object name = itr.next();
 //		 System.out.println(name);
